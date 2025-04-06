@@ -27,12 +27,35 @@
   <section id="inicio">
     <h2>Bienvenidos</h2>
     <p>Este sitio web documenta el avance del proyecto de reciclaje llevado a cabo por el equipo 11P, promoviendo el cuidado ambiental dentro de la comunidad escolar.</p>
+    <p>El reciclaje es fundamental para reducir la contaminación, conservar recursos naturales y proteger el medio ambiente. Conocer más sobre prácticas de reciclaje ayuda a tomar decisiones sostenibles.</p>
   </section>
 
   <section id="bitacora">
     <h2>Bitácora del Proyecto</h2>
+    <div>
+      <label for="ordenarPor">Ordenar por:</label>
+      <select id="ordenarPor" onchange="mostrarEntradas()">
+        <option value="fecha" selected>Fecha (más reciente)</option>
+        <option value="autor">Autor</option>
+        <option value="titulo">Título</option>
+      </select>
+    </div>
     <div id="log-container"></div>
-    <button onclick="agregarEntrada()">Agregar entrada</button>
+    <div id="auth-container">
+      <label for="codigoAcceso">Código de acceso:</label>
+      <input type="password" id="codigoAcceso">
+      <button onclick="autenticar()">Ingresar</button>
+    </div>
+    <div id="editor-bitacora" style="display:none;">
+      <input type="text" id="tituloEntrada" placeholder="Título de la entrada">
+      <input type="text" id="autorEntrada" placeholder="Autor de la entrada">
+      <textarea id="contenidoEntrada" placeholder="Contenido de la entrada..."></textarea>
+      <button onclick="agregarEntrada()">Agregar entrada</button>
+    </div>
+    <div id="admin-container">
+      <label for="claveAdmin">Clave administrador:</label>
+      <input type="password" id="claveAdmin">
+    </div>
   </section>
 
   <section id="metodologia">
@@ -42,7 +65,7 @@
 
   <section id="resultados">
     <h2>Resultados</h2>
-    <canvas id="graficaResultados"></canvas>
+    <canvas id="graficaResultados" width="400" height="200"></canvas>
   </section>
 
   <section id="galeria">
@@ -54,7 +77,7 @@
   <section id="contacto">
     <h2>Contacto</h2>
     <form action="https://formsubmit.co/equipo11pcbtis145@gmail.com" method="POST">
-        <input type="hidden" name="_next" value="https://equipo11p.netlify.app/gracias.html">
+      <input type="hidden" name="_next" value="https://equipo11p.netlify.app/gracias.html">
       <input type="hidden" name="_captcha" value="false">
 
       <label for="nombre">Nombre:</label>
@@ -67,11 +90,17 @@
     </form>
   </section>
 
+  <section>
+    <h2>Encuesta</h2>
+    <p>Queremos conocer tu opinión. Por favor, responde nuestra <a href="https://forms.gle/tuEncuestaEjemplo" target="_blank">encuesta sobre reciclaje</a>.</p>
+  </section>
+
   <footer>
     <p>&copy; 2025 Equipo 11P - Proyecto de Reciclaje</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
+ 
 </body>
 </html>
