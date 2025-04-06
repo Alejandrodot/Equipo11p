@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto Reciclaje 11P</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Proyecto de Reciclaje 11P</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#bitacora">Bitácora</a></li>
+        <li><a href="#metodologia">Metodología</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio">
+    <h2>Bienvenidos</h2>
+    <p>Este sitio web documenta el avance del proyecto de reciclaje llevado a cabo por el equipo 11P, promoviendo el cuidado ambiental dentro de la comunidad escolar.</p>
+  </section>
+
+  <section id="bitacora">
+    <h2>Bitácora del Proyecto</h2>
+    <div id="log-container"></div>
+    <button onclick="agregarEntrada()">Agregar entrada</button>
+  </section>
+
+  <section id="metodologia">
+    <h2>Metodología</h2>
+    <p>El proceso incluye la recolección, clasificación y reciclaje de residuos sólidos. Utilizamos contenedores específicos para PET y papel distribuidos en zonas estratégicas de la escuela.</p>
+  </section>
+
+  <section id="resultados">
+    <h2>Resultados</h2>
+    <canvas id="graficaResultados"></canvas>
+  </section>
+
+  <section id="galeria">
+    <h2>Galería</h2>
+    <img src="imagen1.jpg" alt="Estudiantes reciclando">
+    <img src="imagen2.jpg" alt="Contenedores de reciclaje">
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <form action="https://formsubmit.co/equipo11pcbtis145@gmail.com" method="POST">
+      <input type="hidden" name="_next" value="gracias.html">
+      <input type="hidden" name="_captcha" value="false">
+
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Equipo 11P - Proyecto de Reciclaje</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
